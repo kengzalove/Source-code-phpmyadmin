@@ -1,0 +1,18 @@
+CREATE DATABASE `dbcountlib` ;
+
+CREATE TABLE member(
+UserID int(7) zerofill NOT NULL auto_increment,
+Fname varchar(50) NOT NULL,
+Lname varchar(50) NOT NULL,
+Username varchar(20) NOT NULL,
+Password varchar(20) NOT NULL,
+Position enum(Employee,Student) NOT NULL default 'Student',
+PRIMARY KEY (UserID)
+
+); 
+
+
+INSERT INTO member
+VALUES ( 0000001, 'weerayut', 'tantiprapa', 'weerayut', '1234', 'student' ) ;# แถวที่มีผล: 1
+INSERT INTO member
+VALUES ( 0000002, 'yingyos', 'sriboonruang', 'yingyos', '1234', 'Employee' ) ;# แถวที่มีผล: 1
